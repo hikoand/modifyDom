@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      body {
+        background-color: black;
+        text-align: center;
+      }
+      section {
+        width: 50%;
+        margin: 50px auto;
+        background-color: rgba(255, 136, 0, 0.808);
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .color_box {
+        width: 100px;
+        height: 100px;
+        background: rgb(255, 221, 28);
+        margin: 0 auto;
+        will-change: opacity;
+      }
+
+      h1,
+      h3,
+      span {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <!-- <div class="color_box"></div> -->
+      <img src="./img/avatar.png" alt="avatar" />
+      <img src="./img/avatar.png" alt="avatar" />
+      <h1 id="brand">will-change</h1>
+      <h3>test</h3>
+    </section>
+    <span>Hello World!</span>
+
+    <script>
+      // querySelector 이전에 사용하던 방법
+      // class 선택자일 때 getElementByClass로 바꿔줘야하는 불편함이 있다.
+      const brand = document.getElementById('brand');
+      console.log(brand);
+
+      // querySelector : 동일한 API를 사용하며 문자열만 변경하게 되어 효율적
+      const image = document.querySelector('img');
+      console.log(image);
+
+      //querySelector : 속성값을 이용한 DOM 조작, 가장 위의 노드만 가져옴
+      const avatarImage = document.querySelector('img[src="./img/avatar.png');
+      console.log(avatarImage);
+
+      //querySelectorAll : 해당하는 모든 노드를 다 가져옴
+      const images = document.querySelectorAll('img');
+      console.log(images);
+    </script>
+  </body>
+</html>
